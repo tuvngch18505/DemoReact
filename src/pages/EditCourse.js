@@ -26,7 +26,7 @@ export default function EditCourse() {
     }
 
     useEffect(() => {
-        setCourse(localStorage.getItem('course'));
+        setCourse(localStorage.getItem('name'));
         setDescription(localStorage.getItem('description'));
         setId(localStorage.getItem('id'));
       }, [])
@@ -39,7 +39,7 @@ export default function EditCourse() {
             <form className='form_layout'>
                 <h2> Edit Course</h2>
                 <br />
-                <input type="text" name="name" className="form-control" value={course} placeholder="Enter name of Course" onChange={(e) => setCourse(e.target.value)} required autoFocus/>
+                <input type="text" name="course" className="form-control" value={course} placeholder="Enter name of Course" onChange={(e) => setCourse(e.target.value)} required autoFocus/>
                 <br />
                 <input type="text" name="description" className="form-control" value={description} placeholder="Enter description of Course" onChange={(e) => setDescription(e.target.value)} required autoFocus/>
                 <br />
